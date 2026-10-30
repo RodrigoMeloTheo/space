@@ -1,6 +1,6 @@
 package br.com.joaocarloslima;
 
-public class Nave extends Asset{
+public class Nave extends Asset implements Atirador{
 
 
     public Nave(int x, int y, int velocidade, Direcao direcao) {

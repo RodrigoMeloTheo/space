@@ -62,7 +62,7 @@ public class Controller implements Initializable {
 
                  if (asset instanceof Tiro) {
                      Tiro tiro = (Tiro) asset;
-                     jogo.assets.stream().filter(a -> a instanceof Meteoro).forEach(meteoro -> {
+                     jogo.assets.stream().filter(a -> a instanceof Destrutivel).forEach(meteoro -> {
                          if (tiro.colidiuCom(meteoro)) {
                              ((Meteoro) meteoro).tomarTiro(tiro);
                              if (((Meteoro) meteoro).getPoder() <= 0) {

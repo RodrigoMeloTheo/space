@@ -4,7 +4,7 @@ import javafx.scene.image.ImageView;
 
 import java.util.Random;
 
-public class Meteoro extends Asset{
+public class Meteoro extends Asset implements Destrutivel{
 
     private int tamanho;
     private int poder;
@@ -27,6 +27,11 @@ public class Meteoro extends Asset{
     public void tomarTiro(Tiro tiro){
         this.poder -= tiro.getPoder();
         tamanho = poder;
+    }
+
+    @Override
+    public boolean destruido() {
+        return poder<=0;
     }
 
     @Override
